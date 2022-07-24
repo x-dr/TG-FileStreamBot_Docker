@@ -1,7 +1,8 @@
 # [TG-FileStreamBot 项目Heroku部署和Docker镜像](https://github.com/EverythingSuckz/TG-FileStreamBot)
 
 
-### 环境参数 (`[具体参数请参考原项目](https://github.com/EverythingSuckz/TG-FileStreamBot)`)
+### 环境参数 
+> [具体参数请参考原项目](https://github.com/EverythingSuckz/TG-FileStreamBot)
 
 `API_ID` : 从 my.telegram.org 以获取此变量。
 
