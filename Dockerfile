@@ -1,7 +1,6 @@
-FROM python:3.8.13
+FROM python:alpine3.15
 
-RUN set -x \
-    && apk update -f \
+RUN apk update -f \
     && apk upgrade \
     && apk --no-cache add -f bash \
                              git  \
