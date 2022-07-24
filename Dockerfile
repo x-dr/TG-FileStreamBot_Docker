@@ -2,7 +2,7 @@ FROM python:alpine3.15
 
 # Install dependencies
 
-RUN apk add --no-cache --update git bash tzdata wget\                          
+RUN apk add --no-cache --update git bash  wget\                          
     && git clone https://github.com/EverythingSuckz/TG-FileStreamBot.git /app \
     && pip3 install --no-cache-dir -q -r /app/requirements.txt \
     && rm -rf /var/cache/apk/* \
