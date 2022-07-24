@@ -3,6 +3,8 @@ FROM python:3.8.13-alpine3.15
 # Install dependencies
 WORKDIR /app
 
+COPY . .
+
 RUN apk add --no-cache --update  bash  \                          
     && pip3 install --no-cache-dir -q -r requirements.txt \
     && rm -rf /var/cache/apk/* \
