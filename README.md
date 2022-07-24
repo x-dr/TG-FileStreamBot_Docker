@@ -22,7 +22,31 @@
 
 ### Docker 部署
 
++ 自行构建docker镜像
+```shell
+git clone https://github.com/x-dr/TG-FileStreamBot_Docker.git
+cd TG-FileStreamBot_Docker
+cp .env.example .env
+#修改.env
+#构建镜像
+docker build -t tgurl .
+#运行
+docker run -itd --name tgurl tgurl
+```
 
+#### 使用我编译好的镜像
+> 配置变量
+```shell
+wget https://raw.githubusercontent.com/x-dr/TG-FileStreamBot_Docker/main/.env.example
+cp .env.example .env
+```
+> 运行(运行前，先修改.env中的配置)
+```shell
+docker run --rm -it \
+           -v ${PWD}/.env:/app/.env \
+           --network=host \
+           gindex/tgfileurl
+```
 ## Credits
 
 - [Heroku](https://heroku.com)
