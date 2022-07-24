@@ -1,4 +1,4 @@
-FROM python:alpine3.15
+FROM python:3.8.13
 
 RUN set -x \
     && apk update -f \
