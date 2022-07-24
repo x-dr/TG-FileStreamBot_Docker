@@ -1,10 +1,6 @@
 FROM python:alpine3.15
 
-RUN apk update -f \
-    && apk upgrade \
-    && apk --no-cache add -f bash \
-                             git  \
-                             curl  \                            
+RUN apk add --no-cache --update git bash\                          
     && git clone https://github.com/EverythingSuckz/TG-FileStreamBot.git /app \
     && pip3 install --no-cache-dir -r requirements.txt \
     && rm -rf /var/cache/apk/* \
